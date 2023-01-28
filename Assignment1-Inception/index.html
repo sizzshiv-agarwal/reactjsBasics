@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Namaste React Ji</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- using just HTML -->
+    <div id = "parent">
+        <h1>Namaste Ji - HTML Here</h1> 
+    </div>
+    <div id="baby">
+    </div>
+    <!-- USING JS  -->
+    <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Humne DOM Manipulate kardiya - JS";
+
+        let baby = document.getElementById("parent");
+        baby.appendChild(heading);
+    </script>
+    <!-- USING React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        const heading1 = React.createElement("h1", {}, "Humne bhi kardiya ji - React")
+        // nothing but a js object
+        console.log(heading1); 
+        let baby2 = ReactDOM.createRoot(document.getElementById("baby"));
+        baby2.render(heading1);
+    </script>
+</body>
+</html>
